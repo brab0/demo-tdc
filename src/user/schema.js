@@ -4,21 +4,18 @@ import { TSchema } from '@appt/mongoose';
 @Component({
    extend: TSchema
 })
-export class SchemaComponent {
+export class UserSchema {
    constructor(){
       this.name = {
          type: String,
-         default: ''
+         default: '',
+         trim: ''
       }
 
       this.email = {
          type: String,
-         default: ''
-      }
-
-      this.password = {
-         type: String,
-         default: ''
+         default: '',
+         trim: ''
       }
    }
 }

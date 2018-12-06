@@ -24,5 +24,8 @@ export default {
          useNewUrlParser: true,
          debug: true 
       }
+   },
+   auth: {
+      secret: '98hr924bofjlasdash9f32bi2ntbg'
    }
 }

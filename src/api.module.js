@@ -1,9 +1,11 @@
 import { Module } from '@appt/core';
 
 @Module({
-   declare: [
-      'ModelComponent',
-      'SchemaComponent',      
+   import: [
+      'TrailModule',
+      'UserModule'
+   ],
+   declare: [      
       'RouterComponent',
       'DatabaseComponent',      
       'ServerComponent'
