@@ -5,7 +5,7 @@
     "author": "",
     "main": "main.module.js",
     "scripts": {
-        "start": "export NODE_ENV=development && nodemon --exec babel-node ./src/main.module.js",
+        "start": "export NODE_ENV=development && nodemon --exec babel-node ./src/api.module.js",
         "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./data/,./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files"
     },
     "keywords": [
