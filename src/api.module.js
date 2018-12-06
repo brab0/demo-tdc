@@ -3,7 +3,8 @@ import { Module } from '@appt/core';
 @Module({
    declare: [
       'DatabaseComponent',
-      'ServerComponent'
+      'RouterComponent',
+      'ServerComponent'      
    ]
 })
 export class ApiModule {}
