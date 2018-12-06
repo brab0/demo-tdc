@@ -2,8 +2,11 @@
    "environments": {
       "default": {
          "include": "src/**/*.js",
-         "exclude": "node_modules",
+         "exclude": ["node_modules", "src/**/*.spec.js"],
          "config": "./config/default.js"
+      },
+      "development": {
+         "config": "./config/development.js"
       }
    }
 }
