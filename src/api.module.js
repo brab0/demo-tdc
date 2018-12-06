@@ -2,9 +2,11 @@ import { Module } from '@appt/core';
 
 @Module({
    declare: [
-      'DatabaseComponent',
+      'ModelComponent',
+      'SchemaComponent',      
       'RouterComponent',
-      'ServerComponent'      
+      'DatabaseComponent',      
+      'ServerComponent'
    ]
 })
 export class ApiModule {}
