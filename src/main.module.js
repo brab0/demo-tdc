@@ -1,13 +1,7 @@
-import { Module, TDatabase } from '@appt/core';
-import { Mongoose } from '@appt/mongoose';
-
-import { name, database } from '@appt/core/config';
+import { Module } from '@appt/core';
+import { DatabaseComponent } from './database.component';
 
 @Module({
-   extend: TDatabase(Mongoose, database.uri, database.options)
+   declare: DatabaseComponent
 })
-export class MainModule {
-   constructor(res){
-      console.log(`${name} database is running at: ${database.uri}`)
-   }
-}
+export class MainModule {}
