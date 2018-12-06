@@ -10,6 +10,6 @@ export class RouterComponent {
 
    @Get('/greetings/:name')
    grettings(req, res, next){
-      res.send(req.params.name);
+      res.send(`Hello, ${req.params.name}!`);
    }
 }
