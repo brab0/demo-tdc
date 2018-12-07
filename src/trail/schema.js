@@ -1,44 +1,28 @@
 import { Component } from '@appt/core';
-import { TSchema, SchemaTypes } from '@appt/mongoose';
+import { TSchema, SchemaProperties } from '@appt/mongoose';
 
 @Component({
-   extend: TSchema
+   extend: TSchema,
+   inject: SchemaProperties
 })
 export class TrailSchema {
-   constructor(){
-      this.title = {
-         type: String,
-         default: '',
-         trim: ''
-      }
+   constructor({
+      asString,
+      asDate,
+      asObjectId
+   })
+   {
+      this.title = asString();
 
-      this.date = {
-         type: Date
-      }
+      this.date = asDate()
 
       this.talks = [{
-         title: {
-            type: String,
-            default: '',
-            trim: ''
-         },
-         description: {
-            type: String,
-            default: '',
-            trim: ''
-         },
+         title: asString(),
+         description: asString(),
          speaker: {
-            _id: SchemaTypes.ObjectId,
-            name: {
-               type: String,
-               default: '',
-               trim: ''
-            },
-            email: {
-               type: String,
-               default: '',
-               trim: ''
-            }
+            _id: asObjectId(),
+            name: asString(),
+            email: asString()
          }
       }]
    }

@@ -1,0 +1,8 @@
+{
+    "files.autoSave": "afterDelay",
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "window.zoomLevel": 1,
+    "editor.autoIndent": false,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 3
+}

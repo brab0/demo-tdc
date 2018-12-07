@@ -1,27 +1,19 @@
 import { Component } from '@appt/core';
-import { TSchema } from '@appt/mongoose';
+import { TSchema, SchemaProperties } from '@appt/mongoose';
 
 @Component({
-   extend: TSchema
+   extend: TSchema,
+   inject: SchemaProperties
 })
 export class UserSchema {
-   constructor(){
-      this.name = {
-         type: String,
-         default: '',
-         trim: ''
-      }
+   constructor({
+      asString
+   })
+   {
+      this.name = asString();
 
-      this.email = {
-         type: String,
-         default: '',
-         trim: ''
-      }
+      this.email = asString();
 
-      this.password = {
-        type: String,
-        default: '',
-        trim: ''
-      }
+      this.password = asString();
    }
 }
