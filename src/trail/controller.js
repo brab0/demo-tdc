@@ -35,6 +35,8 @@ export class TrailController {
          _id: _id 
       }, {
          $set: body
+      }, {
+          new: true
       });
    }
 

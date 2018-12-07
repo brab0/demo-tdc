@@ -22,18 +22,18 @@ export class UserRouter {
    getById(req, res, next){
       this.controller.getById(req.params._id)
             .then(data => res.send(data))
-            .catch(err => { throw new Error(err) })
+            .catch(err => res.send('user not found'))
    }
 
    @Post('/')
-   async create(req, res, next){
+   create(req, res, next){
       this.controller.create(req.body)
             .then(data => res.send(data))
             .catch(err => { throw new Error(err) })
    }
 
    @Post('/login')
-   async login(req, res, next){
+   login(req, res, next){
       this.controller.login(req.body)
             .then(data => res.send(data))
             .catch(err => { throw new Error(err) })

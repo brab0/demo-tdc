@@ -17,5 +17,11 @@ export class UserSchema {
          default: '',
          trim: ''
       }
+
+      this.password = {
+        type: String,
+        default: '',
+        trim: ''
+      }
    }
 }

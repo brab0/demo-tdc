@@ -36,7 +36,7 @@ export class UserController {
       const res = await this.User.findOne(body)
 
       if(!res)
-         throw 'Senha incorreta.';
+         return 'Usuário ou Senha incorreta.';
       
       return jwt.sign({
          _id: res._id,
